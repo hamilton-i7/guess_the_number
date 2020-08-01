@@ -1,0 +1,23 @@
+.btn {
+    border: 0;
+    border-radius: .5rem;
+    box-shadow: $shadow;
+    color: $color-white;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    outline: 0;
+    padding: .7rem 0;
+    text-transform: uppercase;
+
+    &--green {
+        @extend .btn;
+        background-color: rgba($color-accent, .95);
+    }
+
+    &--red {
+        @extend .btn;
+        background-color: rgba($color-accent-3, .9);
+    }
+}

@@ -1,0 +1,217 @@
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  background-color: #fcfcfc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  color: #eafadd;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+}
+
+.heading, .heading-primary, .answer, .heading-secondary, .heading-secondary--s {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+
+.heading-primary, .answer {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.heading-secondary {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.heading-secondary--s {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.btn, .btn--green, .btn--red {
+  border: 0;
+  border-radius: .5rem;
+  -webkit-box-shadow: 0 0.7rem 1rem rgba(37, 37, 37, 0.2);
+          box-shadow: 0 0.7rem 1rem rgba(37, 37, 37, 0.2);
+  color: #fafafa;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  outline: 0;
+  padding: .7rem 0;
+  text-transform: uppercase;
+}
+
+.btn--green {
+  background-color: rgba(199, 226, 178, 0.95);
+}
+
+.btn--red {
+  background-color: rgba(236, 57, 57, 0.9);
+}
+
+.guesses-log {
+  background-color: #89c9b8;
+  border-radius: 1.5rem;
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding: 1rem 0;
+  width: 40%;
+}
+
+.guesses-log h2 {
+  text-align: center;
+}
+
+.guesses-log .log-list {
+  padding-left: 3.5rem;
+}
+
+.main-card {
+  background-color: #89c9b8;
+  border: 1.5rem solid #c7e2b2;
+  border-radius: 2.5rem;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "title title title title title" ". answer answer answer ." "info info info info info" "guess guess . hint hint" "new-game new-game . quit quit";
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  margin: 0 auto;
+  margin-top: 7rem;
+  max-width: 34rem;
+  padding: 1.5rem;
+  row-gap: 1.5rem;
+  width: 95%;
+}
+
+.main-card .title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: title;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.main-card .answer {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: answer;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.main-card .info-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: info;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-card .user-guess {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: guess;
+}
+
+.main-card .user-guess input {
+  background-color: #fafafa;
+  border: none;
+  border-radius: .3rem;
+  -webkit-box-shadow: 0 0.7rem 1rem rgba(37, 37, 37, 0.2);
+          box-shadow: 0 0.7rem 1rem rgba(37, 37, 37, 0.2);
+  caret-color: #89c9b8;
+  color: rgba(37, 37, 37, 0.85);
+  display: inline-block;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 700;
+  outline: none;
+  padding: 0.5rem 0;
+  padding-left: 0.8rem;
+  width: 100%;
+}
+
+.main-card .user-guess input::-webkit-input-placeholder {
+  color: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: inherit;
+}
+
+.main-card .user-guess input:-ms-input-placeholder {
+  color: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: inherit;
+}
+
+.main-card .user-guess input::-ms-input-placeholder {
+  color: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: inherit;
+}
+
+.main-card .user-guess input::placeholder {
+  color: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: inherit;
+}
+
+.main-card .hint-msg {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-area: hint;
+  letter-spacing: .1rem;
+  font-weight: 400;
+}
+
+.main-card .hint-msg::first-letter {
+  text-transform: capitalize;
+}
+
+.main-card .new-game {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: new-game;
+}
+
+.main-card .quit {
+  -ms-grid-row: 5;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-area: quit;
+}

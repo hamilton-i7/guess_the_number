@@ -1,0 +1,16 @@
+.guesses-log {
+    background-color: $color-primary;
+    border-radius: 1.5rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+    padding: 1rem 0;
+    width: 40%;
+
+    & h2 {
+        text-align: center;
+    }
+
+    & .log-list {
+        padding-left: 3.5rem;
+    }
+}

@@ -1,0 +1,82 @@
+.main-card {
+    background-color: $color-primary;
+    border: 1.5rem solid $color-accent;
+    border-radius: 2.5rem;
+    display: grid;
+    grid-template-areas:
+        "title title title title title"
+        ". answer answer answer ."
+        "info info info info info"
+        "guess guess . hint hint"
+        "new-game new-game . quit quit";
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0 auto;
+    margin-top: 7rem;
+    max-width: 34rem;
+    padding: 1.5rem;
+    row-gap: 1.5rem;
+    width: 95%;
+
+    & .title {
+        grid-area: title;
+        justify-self: center;
+    }   
+
+    & .answer {
+        grid-area: answer;
+        justify-self: center;
+    }
+
+    & .info-panel {
+        display: flex;
+        grid-area: info;
+        justify-content: space-between;
+    }
+
+    & .user-guess {
+        grid-area: guess;
+
+        & input {
+            background-color: $color-white;
+            border: none;
+            border-radius: .3rem;
+            box-shadow: $shadow;
+            caret-color: $color-primary;
+            color: rgba($color-black, .85);
+            display: inline-block;
+            font-size: inherit;
+            font-family: inherit;
+            font-weight: 700;
+            outline: none;
+            padding: 0.5rem 0;
+            padding-left: 0.8rem;
+            width: 100%;
+
+            &::placeholder {
+                color: inherit;
+                font-family: inherit;
+                font-size: 1rem;
+                font-weight: inherit;
+            }
+        }
+    }
+
+    & .hint-msg {
+        align-self: center;
+        grid-area: hint;
+        letter-spacing: .1rem;
+        font-weight: 400;
+
+        &::first-letter {
+            text-transform: capitalize;
+        }
+    }
+
+    & .new-game {
+        grid-area: new-game;
+    }
+
+    & .quit {
+        grid-area: quit;
+    }
+}

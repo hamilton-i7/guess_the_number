@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="main-card js--mainCard">
+            <h1 class="heading-primary title js--mainTitle"></h1>
+            <h2 class="heading-secondary answer js--answer"></h2>
+
+            <div class="info-panel">
+                <h2 class="heading-secondary min">min: 1</h2>
+                <h2 class="heading-secondary max">max: <span class="js--maxValue"></span></h2>
+                <h2 class="heading-secondary lives">lives: <span class="js--lives"></span></h2>
+            </div>
+
+            <div class="user-guess">
+                <input type="number" name="" id="" class="js--playerGuess">
+            </div>
+
+            <p class="hint-msg js--hint"></p>
+
+            <button class="new-game btn--green js--newGame">new game</button>
+            <button class="quit btn--red js--quit">quit</button>
+        </div>
+    </main>
+
+    <section class="guesses-log">
+        <h2 class="heading-secondary--s">guesses</h2>
+        <ul class="log-list js--logList"></ul>
+    </section>
+</body>
+</html>
