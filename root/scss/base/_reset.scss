@@ -5,12 +5,17 @@
 }
 
 html {
-    font-size: 65.2%;
+    font-size: 62.5%;
 }
 
 body {
     background-color: $color-background;
     box-sizing: border-box;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
 }
 
 .hide {
